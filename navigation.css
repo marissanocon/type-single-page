@@ -30,7 +30,7 @@
   }
   
   nav ul {
-      margin: 0;
+      margin: 10;
       padding: 0;
       list-style: none;
   }
@@ -41,15 +41,17 @@
   }
   
   nav a {
-      color: black;
+      color: rgba(84, 54, 49, 0.5);
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 25px;
       opacity: 0;
       transition: opacity 100ms ease-in-out;
   }
+
+
   /* where to change the font color of the nav bar pop-up */
   nav a:hover {
-      color: orange;
+      color: rgba(84, 54, 49, 1);
   }
   
   .nav-checkbox:checked ~ nav {
@@ -78,7 +80,7 @@
           /* color of the hamburger menu */
           background: black;
           /* how far the hamburger menu is from the top */
-          margin-top:7px;
+          margin-top:60px;
           height: 3px;
           width: 2em;
           position: relative;

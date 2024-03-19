@@ -1,13 +1,23 @@
 @font-face {
     src:
         url('fonts/Fraunces[SOFT\,WONK\,opsz\,wght].woff2') format("woff"),
-        url('fonts/Fraunces[SOFT\,WONK\,opsz\,wght].ttf') format('truetype');
+        url('fonts/Fraunces[SOFT\,WONK\,opsz\,wght].ttf') format("truetype");
 
     font-family: 'Fraunces';
     font-style: normal;
     font-weight: normal;
     }
     
+    @font-face {
+        src:
+            url('fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].woff2') format("woff"),
+            url('fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].ttf') format("truetype");
+    
+        font-family: 'Fraunces Italic';
+        font-style: normal;
+        font-weight: normal;
+        }
+        
     /* *{
         border: blue 3px dashed;
     } */
@@ -15,10 +25,12 @@
     body{
     background-color: rgba(245, 233, 226, 1);
     font-family: 'Fraunces';
+    margin: 0;
+    padding: 0;
+    /* overflow-y: hidden; */
 }
 /* how the page wrapper will appear on mobile */
 .page-wrapper{
-  
     margin-inline: auto;
 }
 /* how the page wrapper appears on desktop */
@@ -27,26 +39,62 @@
 .page-wrapper{
 display: grid;
 grid-gap: 25px;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: repeat (12, 1fr);
 grid-template-rows: auto;
 grid-template-areas: 
-    "h c"
-    "a a";
+    "h h h h h h h h h c c c"
+    "a a a a a a a a a a a a";
 }
 
 .hero {
 font-size: 12px;
+padding-bottom: 40px;
+padding-top: 40px;
 }
+
+.this-is {
+    font-family: 'Fraunces Italic';
+    padding-top: 40px;
+color:rgba(84, 54, 49, 1);
+}
+
+.first {
+    color: rgba(208, 54, 71, 0.5);
+}
+.second {
+    color: rgba(209, 138, 151, 0.7);
+}
+.third {
+    color: rgba(255, 131, 147, 0.5);
+}
+.first1 {
+    color: rgba(248, 197, 212, 0.7);
+}
+.second2 {
+    color: rgba(84, 54, 49, 1)
+}
+.third3 {
+    color: rgba(255, 196, 187, 0.7);
+}
+
+
 
 .history {
 grid-area: h;
-margin-left: 40px;
+margin-left: 50px;
+text-align: left;
+color:rgba(84, 54, 49, 1);
+
+/* border-style: solid; */
 }
 
 .variations{
 grid-area: c;
-margin-left: 150px;
-font-size: 60px;
+margin-right: 50px;
+font-size: 80px;
+text-align: right;
+color:rgba(84, 54, 49, 1);
+/* border-style: solid; */
 }
 
 #characters {
@@ -54,21 +102,24 @@ grid-area: a;
 background-color: rgba(52, 40, 40, 1);
 color: rgba(245, 233, 226, 1);
 text-align: center;
+font-size: 40px;
 }
 
 #text-wrapper{
+    position: relative;
     margin-left: 40px;
-
 }
 
 .characters-title{
     color:rgba(252, 207, 199, 1);
     text-align: left;
+    font-style: italic;
 }
 
 /* CSS for the footer */
 footer{
     background-color: rgba(245, 233, 226, 1);
+    color:rgba(84, 54, 49, 1);
     display: grid;
     width: 100%;
     grid-gap:5px;
@@ -83,13 +134,13 @@ footer{
 h2{
     font-size: 30px;
     margin-left: 40px;
-    margin-top: 40px;
+    margin-top: 70px;
 }
 
 h3{
     font-weight:20; 
     text-align: center;
-    font-size: 5em;
+    font-size: 8em;
     animation: weightChange 7s infinite;
 }
 
@@ -107,6 +158,7 @@ h5{
     font-size: 15px;
     text-align: center;
     margin-right: 50px;
+    font-weight: 200;
     /* border-style: solid;
     border-color: red; */
 }
@@ -128,19 +180,15 @@ h5{
 }
 
 .variable-font:hover{
-    font-weight:500 ;
-    height:100vh;
+    font-weight: 500;
+    height: 100vh;
     font-size: 7em;
-    display:grid;
+    display: grid;
     place-content: center;
     margin: 0;
     text-align: center;
     font-variation-settings: "wght" 120, "wdth" 0, "XXXX" 100;
 }
-
-
-
-
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -149,6 +197,13 @@ h5{
     }
     h5{
         font-size: 10px;
+    }
+    .variations{
+        font-size: 25px;
+        display: grid;
+    }
+    .history{
+        font-size: 14px;
     }
   }
   
@@ -160,7 +215,14 @@ h5{
     h5{
         font-size: 12px;
     }
-  }
+    .variations{
+        display: grid;
+        font-size: 25px;
+    }
+    .history{
+        font-size: 20px;
+    }
+    }
   
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
@@ -170,7 +232,14 @@ h5{
     h5{
         font-size: 15px;
     }
-  } 
+    .variations{
+        display: grid;
+        font-size: 50px;
+    }
+    .history{
+        font-size: 25px;
+    }
+}
   
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
@@ -184,8 +253,15 @@ h5{
         grid-template-areas: 
         ". . f c c c c c c c c";
     }
+    .variations{
+        display: grid;
+        font-size: 60px;
   } 
-  
+    .history{
+        font-size: 30px;
+    }
+}
+
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     footer{
@@ -193,6 +269,12 @@ h5{
         grid-template-areas: 
         ". . f c c c c c c c c";
   }
+    .variations{
+        font-size: 60px;
+} 
+    .history{
+        font-size: 30px;
+}
 
 @keyframes weightChange{
     0%, 100%{
@@ -201,5 +283,4 @@ h5{
     
     50%{
         font-variation-settings: "opsz" 9, "wght" 900, "SOFT" 0, "WONK" 1;
-}
-}}
+}}}
