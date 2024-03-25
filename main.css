@@ -8,15 +8,15 @@
     font-weight: normal;
     }
     
-    @font-face {
-        src:
-            url('fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].woff2') format("woff"),
-            url('fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].ttf') format("truetype");
+@font-face {
+    src:
+        url('fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].woff2') format("woff"),
+        url('fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].ttf') format("truetype");
     
-        font-family: 'Fraunces Italic';
-        font-style: normal;
-        font-weight: normal;
-        }
+    font-family: 'Fraunces Italic';
+    font-style: normal;
+    font-weight: normal;
+    }
         
     /* *{
         border: blue 3px dashed;
@@ -33,29 +33,28 @@
 .page-wrapper{
     margin-inline: auto;
 }
+
+
 /* how the page wrapper appears on desktop */
 
-
-.page-wrapper{
-display: grid;
-grid-gap: 25px;
-grid-template-columns: repeat (12, 1fr);
-grid-template-rows: auto;
-grid-template-areas: 
-    "h h h h h h h h h c c c"
-    "a a a a a a a a a a a a";
-}
-
+/* start of hero */
 .hero {
-font-size: 12px;
-padding-bottom: 40px;
-padding-top: 40px;
+    font-size: 12px;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 .this-is {
     font-family: 'Fraunces Italic';
     padding-top: 40px;
-color:rgba(84, 54, 49, 1);
+    color:rgba(84, 54, 49, 1);
+    font-variation-settings: "wght" 400, "WONK" 1, "SOFT" 0, "opsz" 85;
+}
+
+h2{
+    font-size: 80px;
+    margin-left: 40px;
+    margin-top: 70px;
 }
 
 .first {
@@ -76,33 +75,89 @@ color:rgba(84, 54, 49, 1);
 .third3 {
     color: rgba(255, 196, 187, 0.7);
 }
+/* end of hero */
 
+.page-wrapper{
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat (12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "h h h h h h h h h v v v"
+    "c c c c c c c c c c c c";
+}
 
+.history-title {
+    font-size: 50px;
+    font-family: Fraunces Italic;
+    font-variation-settings: "wght" 400, "SOFT" 0, "WONK" 0, "opsz" 85;
+}
 
 .history {
-grid-area: h;
-margin-left: 50px;
-text-align: left;
-color:rgba(84, 54, 49, 1);
-
+    grid-area: h;
+    margin-left: 50px;
+    text-align: left;
+    color:rgba(84, 54, 49, 1);
+    font-variation-settings: "wght" 300, "SOFT" 0, "WONK" 0, "opsz" 28;
 /* border-style: solid; */
 }
 
 .variations{
-grid-area: c;
-margin-right: 50px;
-font-size: 80px;
-text-align: right;
-color:rgba(84, 54, 49, 1);
-/* border-style: solid; */
+    grid-area: v;
+    margin-right: 50px;
+    font-size: 80px;
+    text-align: right;
+    font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 65;
+    color:rgba(84, 54, 49, 1);
+    display: none;
 }
 
+.variations .weight{
+    font-variation-settings: "wght" 300;
+}
+
+.variations .softness{
+    font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 65;
+}
+
+@keyframes changeweight {
+    from {
+        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 65;
+    }
+    to {
+        font-variation-settings: "wght" 900, "WONK" 0, "SOFT" 0, "opsz" 65;
+    }
+  }
+  
+  .weight:hover {
+    animation-duration: 1s;
+    animation-name: changeweight;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+@keyframes changesoftness {
+    from {
+        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 65;
+    }
+    to {
+        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 100, "opsz" 65;
+    }
+}
+  .softness:hover {
+    animation-duration: 1s;
+    animation-name: changesoftness;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+
 #characters {
-grid-area: a;
-background-color: rgba(52, 40, 40, 1);
-color: rgba(245, 233, 226, 1);
-text-align: center;
-font-size: 40px;
+    grid-area: c;
+    background-color: rgba(52, 40, 40, 1);
+    color: rgba(245, 233, 226, 1);
+    text-align: center;
+    font-size: 40px;
 }
 
 #text-wrapper{
@@ -114,9 +169,10 @@ font-size: 40px;
     color:rgba(252, 207, 199, 1);
     text-align: left;
     font-style: italic;
+    font-size: 50px;
 }
 
-/* CSS for the footer */
+/* footer */
 footer{
     background-color: rgba(245, 233, 226, 1);
     color:rgba(84, 54, 49, 1);
@@ -131,11 +187,6 @@ footer{
 
 /* variable font animation */
 
-h2{
-    font-size: 30px;
-    margin-left: 40px;
-    margin-top: 70px;
-}
 
 h3{
     font-weight:20; 
