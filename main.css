@@ -2,124 +2,214 @@
     src:
         url('fonts/Fraunces[SOFT\,WONK\,opsz\,wght].woff2') format("woff"),
         url('fonts/Fraunces[SOFT\,WONK\,opsz\,wght].ttf') format("truetype");
-
     font-family: 'Fraunces';
     font-style: normal;
     font-weight: normal;
     }
-    
 @font-face {
     src:
         url('fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].woff2') format("woff"),
         url('fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].ttf') format("truetype");
-    
     font-family: 'Fraunces Italic';
     font-style: normal;
     font-weight: normal;
     }
-        
-    /* *{
-        border: blue 3px dashed;
-    } */
-    
+
+    *{
+        margin: 0;
+    }
+
     body{
     background-color: rgba(245, 233, 226, 1);
     font-family: 'Fraunces';
-    margin: 0;
-    padding: 0;
-    /* overflow-y: hidden; */
-}
-/* how the page wrapper will appear on mobile */
-.page-wrapper{
-    margin-inline: auto;
-}
+    }
 
+    /* *{
+        border: blue 3px dashed;
+    } */
 
-/* how the page wrapper appears on desktop */
-
+  
 /* start of hero */
-.hero {
-    font-size: 12px;
-    padding-bottom: 40px;
-    padding-top: 40px;
-}
+    .this-is{
+        font-size: 60px;
+        font-family: 'Fraunces Italic';
+        font-variation-settings: "wght" 400, "WONK" 1, "SOFT" 0, "opsz" 85;
+        color:rgba(84, 54, 49, 1);
+        padding-top: 100px;
+        position: relative;
+        left: 50px;
+        margin-right: 50px;
+       }
 
-.this-is {
-    font-family: 'Fraunces Italic';
-    padding-top: 40px;
+    .hero{
+        overflow-x: hidden;
+        overflow-x: clip !important;
+    }
+
+   .first {
+       color: rgba(208, 54, 71, 0.5);
+       font-variation-settings: "wght" 248, "WONK" 0, "SOFT" 100, "opsz" 144;
+       font-size: 150px;
+       position: relative;
+       left: -30px;
+   }
+   .second {
+       color: rgba(209, 138, 151, 0.7);
+       font-variation-settings: "wght" 343, "WONK" 100, "SOFT" 0, "opsz" 144;
+       font-size: 150px;
+       position: relative;
+       left: -40px;
+   }
+   .third {
+       color: rgba(255, 131, 147, 0.5);
+       font-variation-settings: "wght" 149, "WONK" 100, "SOFT" 96, "opsz" 144;
+       font-size: 150px;
+       position: relative;
+       right: -980px;
+       top: -184px;
+   }
+   .first1 {
+       color: rgba(248, 197, 212, 0.7);
+       font-variation-settings: "wght" 651, "WONK" 0, "SOFT" 0, "opsz" 144;
+       font-size: 150px;
+       position: relative;
+       right: 670px;
+   }
+   .second2 {
+       color: rgba(84, 54, 49, 1);
+       font-variation-settings: "wght" 343, "WONK" 100, "SOFT" 0, "opsz" 144;
+       font-size: 150px;
+       font-family: "Fraunces Italic";
+       position: relative;
+       right: -410px;
+       top: -184px;
+   }
+   .third3 {
+       color: rgba(255, 196, 187, 0.7);
+       font-variation-settings: "wght" 452, "WONK" 100, "SOFT" 100, "opsz" 120;
+       font-size: 150px;
+       position: relative;
+       right: -420px;
+       top: -184px;
+   }
+   .symbols {
     color:rgba(84, 54, 49, 1);
-    font-variation-settings: "wght" 400, "WONK" 1, "SOFT" 0, "opsz" 85;
-}
-
-h2{
-    font-size: 80px;
-    margin-left: 40px;
-    margin-top: 70px;
-}
-
-.first {
-    color: rgba(208, 54, 71, 0.5);
-}
-.second {
-    color: rgba(209, 138, 151, 0.7);
-}
-.third {
-    color: rgba(255, 131, 147, 0.5);
-}
-.first1 {
-    color: rgba(248, 197, 212, 0.7);
-}
-.second2 {
-    color: rgba(84, 54, 49, 1)
-}
-.third3 {
-    color: rgba(255, 196, 187, 0.7);
-}
+    font-size: 110px;
+    position: relative;
+    top: -150px;
+    word-spacing: 20px;
+    display: block;
+    text-align: center;
+   }
 /* end of hero */
 
-.page-wrapper{
+/* body */
+   .page-wrapper{
     display: grid;
-    grid-gap: 25px;
-    grid-template-columns: repeat (12, 1fr);
+    grid-template-columns: 900px auto;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "h h h h h h h h h v v v"
-    "c c c c c c c c c c c c";
-}
+    grid-template-areas:
+    "h v"
+    "c c"
+    "d d" ;
+   }
 
-.history-title {
-    font-size: 50px;
-    font-family: Fraunces Italic;
-    font-variation-settings: "wght" 400, "SOFT" 0, "WONK" 0, "opsz" 85;
-}
+    .variations{
+        grid-area: "v";
+        color:rgba(84, 54, 49, 1);
+        font-size: 60px;
+        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 9;
+        display: grid;
+        text-align: right;
+        position: relative;
+        margin-right: 60px;
+    }
 
-.history {
-    grid-area: h;
-    margin-left: 50px;
-    text-align: left;
-    color:rgba(84, 54, 49, 1);
-    font-variation-settings: "wght" 300, "SOFT" 0, "WONK" 0, "opsz" 28;
-/* border-style: solid; */
-}
+    .history-title {
+        font-size: 80px;
+        font-family: Fraunces Italic;
+        font-variation-settings: "wght" 400, "SOFT" 0, "WONK" 0, "opsz" 85;
+        position: relative;
+        left: -15px;
+        margin-top: 100px;
+        padding-bottom: 10px;
+        color:rgba(84, 54, 49, 1);
+    }
 
-.variations{
-    grid-area: v;
-    margin-right: 50px;
-    font-size: 80px;
-    text-align: right;
-    font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 65;
-    color:rgba(84, 54, 49, 1);
-    display: none;
-}
+    .history{
+        grid-area: "h";
+        font-size: 30px;
+        font-variation-settings: "wght" 300, "SOFT" 0, "WONK" 0, "opsz" 28;
+        position:relative;
+        top: -100px;
+        margin-left: 60px;
+        margin-right: 20px;
+        text-indent: 20px;
+        color:rgba(84, 54, 49, 1);
+    }
 
-.variations .weight{
-    font-variation-settings: "wght" 300;
-}
+    .characters-title{
+        color: rgba(252, 207, 199, 1);
+        padding-top: 10px;
+        padding-bottom: 40px;
+        font-size: 80px;
+        font-family: Fraunces Italic;
+        font-variation-settings: "wght" 400, "SOFT" 0, "WONK" 0, "opsz" 85;
+        position: relative;
+        left: -400px;
+    }
 
-.variations .softness{
-    font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 65;
-}
+    .characters{
+        text-align: center;
+        grid-area: "c";
+        color: rgba(245, 233, 226, 1);
+        font-size: 60px;
+        background-color: rgba(52, 40, 40, 1);
+        margin-right: -540px;
+        padding-bottom: 20px;
+    }
 
+    .italic{
+        font-family: "fraunces-italic";
+    }
+
+    .wonkers2{
+        font-family: "fraunces-italic";
+    }
+
+    .download-button{
+        grid-area: "d";
+        background-color: rgba(252, 207, 199, 1);
+        font-family: "fraunces";
+        border: none;
+    }
+
+
+/* footer */
+    .footer{
+        background-color: rgba(245, 233, 226, 1);
+        color:rgba(84, 54, 49, 1);
+        display: grid;
+        grid-template-columns: repeat(6 1fr);
+        grid-template-areas:
+        "f f f i i i";
+        width: 100%;
+    }
+    h4{
+        grid-area: "f";
+        font-size: 60px;
+        text-align: center;
+        color:rgba(84, 54, 49, 1);
+    }
+    h5{
+        grid-area: "i";
+        font-size: 20px;
+        color:rgba(84, 54, 49, 1);
+        text-align: center;
+    }
+
+
+/* animations */
 @keyframes changeweight {
     from {
         font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 65;
@@ -128,14 +218,12 @@ h2{
         font-variation-settings: "wght" 900, "WONK" 0, "SOFT" 0, "opsz" 65;
     }
   }
-  
   .weight:hover {
     animation-duration: 1s;
     animation-name: changeweight;
     animation-iteration-count: infinite;
     animation-direction: alternate;
   }
-
 @keyframes changesoftness {
     from {
         font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 65;
@@ -151,187 +239,42 @@ h2{
     animation-direction: alternate;
   }
 
-
-#characters {
-    grid-area: c;
-    background-color: rgba(52, 40, 40, 1);
-    color: rgba(245, 233, 226, 1);
-    text-align: center;
-    font-size: 40px;
-}
-
-#text-wrapper{
-    position: relative;
-    margin-left: 40px;
-}
-
-.characters-title{
-    color:rgba(252, 207, 199, 1);
-    text-align: left;
-    font-style: italic;
-    font-size: 50px;
-}
-
-/* footer */
-footer{
-    background-color: rgba(245, 233, 226, 1);
-    color:rgba(84, 54, 49, 1);
-    display: grid;
-    width: 100%;
-    grid-gap:5px;
-    grid-template-columns: repeat (12, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "f c c c c c c c c c c";
-}
-
-/* variable font animation */
-
-
-h3{
-    font-weight:20; 
-    text-align: center;
-    font-size: 8em;
-    animation: weightChange 7s infinite;
-}
-
-h4{
-    grid-area: f;
-    font-size: 1.5em;
-    text-align: center;
-    margin-left: 50px;
-    /* border-color: blue;
-    border-style: solid; */
-}
-
-h5{
-    grid-area: c;
-    font-size: 15px;
-    text-align: center;
-    margin-right: 50px;
-    font-weight: 200;
-    /* border-style: solid;
-    border-color: red; */
-}
-
-
-/* variable font that changes on hover */
-.variable-font{
-    font-weight:1 ;
-    height:100vh;
-    font-size: 10em;
-    display:grid;
-    place-content: center;
-    margin: 0;
-    text-align: center;
-    font-variation-settings: "wght" 40, "wdth" 0, "XXXX" 1;
-    transition: 
-        font-weight 500ms,
-        font-variation-settings 3s;
-}
-
-.variable-font:hover{
-    font-weight: 500;
-    height: 100vh;
-    font-size: 7em;
-    display: grid;
-    place-content: center;
-    margin: 0;
-    text-align: center;
-    font-variation-settings: "wght" 120, "wdth" 0, "XXXX" 100;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    h4{
-        font-size: 18px;
+  @keyframes changewonk {
+    from {
+        font-variation-settings: "wght" 400, "WONK" 0, "SOFT" 0, "opsz" 65;
     }
-    h5{
-        font-size: 10px;
-    }
-    .variations{
-        font-size: 25px;
-        display: grid;
-    }
-    .history{
-        font-size: 14px;
-    }
-  }
-  
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
-    h4{
-        font-size: 20px;
-    }
-    h5{
-        font-size: 12px;
-    }
-    .variations{
-        display: grid;
-        font-size: 25px;
-    }
-    .history{
-        font-size: 20px;
-    }
-    }
-  
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
-    h4{
-        font-size: 25px;
-    }
-    h5{
-        font-size: 15px;
-    }
-    .variations{
-        display: grid;
-        font-size: 50px;
-    }
-    .history{
-        font-size: 25px;
+    to {
+        font-variation-settings: "wght" 400, "WONK" 1, "SOFT" 0, "opsz" 65;
     }
 }
-  
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-    footer{
-        background-color: rgba(245, 233, 226, 1);
-        display: grid;
-        width: 100%;
-        grid-gap:5px;
-        grid-template-columns: repeat (12, 1fr);
-        grid-template-rows: auto;
-        grid-template-areas: 
-        ". . f c c c c c c c c";
-    }
-    .variations{
-        display: grid;
-        font-size: 60px;
-  } 
-    .history{
-        font-size: 30px;
-    }
+.wonk:hover {
+    animation-duration: 1s;
+    animation-name: changewonk;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.wonkers {
+    animation-duration: 3s;
+    animation-name: changewonk;
+    animation-iteration-count: infinite;
+}
+.wonkers2{
+    animation-duration: 3s;
+    animation-name: changewonk;
+    animation-iteration-count: infinite;
 }
 
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-    footer{
-        grid-template-rows: auto;
-        grid-template-areas: 
-        ". . f c c c c c c c c";
-  }
-    .variations{
-        font-size: 60px;
-} 
-    .history{
-        font-size: 30px;
-}
-
-@keyframes weightChange{
-    0%, 100%{
-        font-variation-settings: "opsz" 9, "wght" 100, "SOFT" 0, "WONK" 1;
+@keyframes changeopsz {
+    from {
+        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 9;
     }
-    
-    50%{
-        font-variation-settings: "opsz" 9, "wght" 900, "SOFT" 0, "WONK" 1;
-}}}
+    to {
+        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 144;
+    }
+}
+.optical-size:hover {
+    animation-duration: 1s;
+    animation-name: changeopsz;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
