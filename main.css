@@ -77,19 +77,19 @@
    }
    .second2 {
        color: rgba(84, 54, 49, 1);
+       text-align: center;
        font-variation-settings: "wght" 343, "WONK" 100, "SOFT" 0, "opsz" 144;
        font-size: 150px;
        font-family: "Fraunces Italic";
-       position: relative;
-       right: -410px;
-       top: -184px;
+       position: absolute;
+       right: 380px;
    }
    .third3 {
        color: rgba(255, 196, 187, 0.7);
        font-variation-settings: "wght" 452, "WONK" 100, "SOFT" 100, "opsz" 120;
        font-size: 150px;
        position: relative;
-       right: -420px;
+       left: 1070px;
        top: -184px;
    }
    .symbols {
@@ -118,11 +118,15 @@
         grid-area: "v";
         color:rgba(84, 54, 49, 1);
         font-size: 60px;
-        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 9;
+        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 144;
         display: grid;
         text-align: right;
         position: relative;
         margin-right: 60px;
+    }
+
+    .wonk:hover {
+        font-variation-settings: "wght" 100, "WONK" 1, "SOFT" 0, "opsz" 144;
     }
 
     .history-title {
@@ -136,7 +140,7 @@
         color:rgba(84, 54, 49, 1);
     }
 
-    .history{
+    #history{
         grid-area: "h";
         font-size: 30px;
         font-variation-settings: "wght" 300, "SOFT" 0, "WONK" 0, "opsz" 28;
@@ -148,10 +152,11 @@
         color:rgba(84, 54, 49, 1);
     }
 
-    .characters-title{
+    #characters-title{
         color: rgba(252, 207, 199, 1);
         padding-top: 10px;
         padding-bottom: 40px;
+        padding-top: 40px;
         font-size: 80px;
         font-family: Fraunces Italic;
         font-variation-settings: "wght" 400, "SOFT" 0, "WONK" 0, "opsz" 85;
@@ -177,11 +182,13 @@
         font-family: "fraunces-italic";
     }
 
-    .download-button{
+    #download-button{
         grid-area: "d";
         background-color: rgba(252, 207, 199, 1);
         font-family: "fraunces";
         border: none;
+        width: 10%;
+        height: 5%;
     }
 
 
@@ -212,10 +219,10 @@
 /* animations */
 @keyframes changeweight {
     from {
-        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 65;
+        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 144;
     }
     to {
-        font-variation-settings: "wght" 900, "WONK" 0, "SOFT" 0, "opsz" 65;
+        font-variation-settings: "wght" 900, "WONK" 0, "SOFT" 0, "opsz" 144;
     }
   }
   .weight:hover {
@@ -224,12 +231,13 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
   }
+
 @keyframes changesoftness {
     from {
-        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 65;
+        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 144;
     }
     to {
-        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 100, "opsz" 65;
+        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 100, "opsz" 144;
     }
 }
   .softness:hover {
@@ -241,17 +249,11 @@
 
   @keyframes changewonk {
     from {
-        font-variation-settings: "wght" 400, "WONK" 0, "SOFT" 0, "opsz" 65;
+        font-variation-settings: "wght" 400, "WONK" 0, "SOFT" 0, "opsz" 144;
     }
     to {
-        font-variation-settings: "wght" 400, "WONK" 1, "SOFT" 0, "opsz" 65;
+        font-variation-settings: "wght" 400, "WONK" 1, "SOFT" 0, "opsz" 144;
     }
-}
-.wonk:hover {
-    animation-duration: 1s;
-    animation-name: changewonk;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 .wonkers {
     animation-duration: 3s;
@@ -266,10 +268,10 @@
 
 @keyframes changeopsz {
     from {
-        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 9;
+        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 144;
     }
     to {
-        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 144;
+        font-variation-settings: "wght" 100, "WONK" 0, "SOFT" 0, "opsz" 9;
     }
 }
 .optical-size:hover {
@@ -278,3 +280,37 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
+@keyframes changes {
+    0% {
+        font-variation-settings: "wght" 200, "WONK" 0, "SOFT" 0, "opsz" 9;
+        left: 400px;
+    }
+    20% {
+        font-variation-settings: "wght" 500, "WONK" 0, "SOFT" 0, "opsz" 9;
+        font-family: "Fraunces-Italic";
+    }
+    40% {
+        font-variation-settings: "wght" 200, "WONK" 0, "SOFT" 100, "opsz"9;
+        font-family: "Fraunces";
+    }
+    60% {
+        font-variation-settings: "wght" 100, "WONK" 1, "SOFT" 0, "opsz" 9;
+        font-family: "Fraunces-Italic";
+        right: 380px;
+    }
+    80% {
+        font-variation-settings: "wght" 400, "WONK" 0, "SOFT" 100, "opsz" 9;
+        font-family: "Fraunces";
+        right: 380px;
+    }
+}
+.second2 {
+    animation-duration: 4s;
+    animation-name: changes;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+}
+
+
+/* media query */
