@@ -187,11 +187,21 @@
         background-color: rgba(252, 207, 199, 1);
         font-family: "fraunces";
         border: none;
-        width: 10%;
-        height: 5%;
+        padding:7px;
+        /* width: 10%; */
+        /* height: 5%; */
+
     }
-
-
+h3{
+    font-size:50px;
+}
+    a:hover{
+        color:blue;
+        font-size:40px;
+        }
+    a {
+            text-decoration: none;
+          }
 /* footer */
     .footer{
         background-color: rgba(245, 233, 226, 1);
